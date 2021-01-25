@@ -26,11 +26,28 @@ body{background-color: #fafafa;}
 
 /*---------------------------------------------------*/
 /*-- HEADER --*/
+.header{
+    position: fixed;
+    top: 0rem;
+    left: 1.8rem;
+    backdrop-filter: saturate(1.8) blur(5px);
+    width: 100%;
+}
 
+.header p{
+    padding-left: 2rem;
+    color: #000;
+}
+
+.header a{
+    text-decoration: none;
+    font-size: 4rem;
+    color: #000;
+}
 
 /*-- INTRO AND PHOTO --*/
 .intro-and-photo-cont{
-    margin-top: 7rem;
+    margin-top: 15rem;
 }
 
 .intro-cont {
