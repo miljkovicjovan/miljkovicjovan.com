@@ -24,7 +24,6 @@ body{padding: 0; margin: 0;}
 /*background color*/
 body{background-color: #fafafa;}
 
-/*---------------------------------------------------*/
 /*-- HEADER --*/
 .header{
     position: fixed;
@@ -49,50 +48,86 @@ body{background-color: #fafafa;}
     color: rgb(150, 144, 144);
 }
 
-/*-- INTRO AND PHOTO --*/
-.intro-and-photo-cont{
+/*-------------------- HERO --------------------*/
+.hero {
     margin-top: 15rem;
+    padding: 0 5rem 0 0;
 }
 
-.intro-cont {
-    width: 40rem;
-    padding: 0 10rem 0 10rem;
+/*--header--*/
+.post-header{
+    text-align: center;
+}
+.post-header h1{
+    font-size: 5rem;
 }
 
-/*-- the typing effect --*/
-.header-typed {
-    color:rgb(87, 87, 87);
-    font-size: 5.7rem;
-    letter-spacing: 0.1rem;
+/*--by who--*/
+.by-who{
+    padding-top: 2rem ;
+    padding-bottom: 2rem;
+    display: flex;
 }
-
-.typed-cursor {
-    font-size: 5.5rem;
-    color:rgb(87, 87, 87);
-}
-
-.intro-cont p {
-    font-size: 2rem;
-    background-color: #fff;
-    padding: 2rem;
+.by-who img{
+    margin-left: 3rem;
+    height: 6rem;
     border-radius: 2rem;
-    font-size: 3.2rem;
+    margin: 2rem;
+}
+.by-who p{
+    font-size: 2.8rem;
+    padding: 1rem 0 0 0;
 }
 
-.write-about-me {
-    color: rgb(87, 87, 87);
-    font-size: 3.5rem;
+/*--tags--*/
+.tags{
+    margin-left: 1rem;
+}
+.tags span{
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    width: 12rem;
+    background-color: rgb(235, 228, 228);
+    border-radius: 1rem;
 }
 
-.photo-cont{
-    padding: 0 4rem 0 0;
+/*-- POST --*/
+.post{
+    text-align: left;
+    padding: 5rem 5rem 0 5rem;
 }
 
-.photo-cont img{
-    padding: 3rem 10rem 8rem 10rem;
-    width: 42rem;
-    height: 58rem;
+.post h1{
+    font-size: 5rem;
 }
+
+.post p{
+    font-size: 4rem;
+    color: #5a5a5a;
+}
+
+.post a{
+    text-decoration: none;
+    color: #4078c0;
+    transition: all 0.4s;
+}
+
+.post a:hover{
+    color: #00acee;
+}
+
+.post li{
+    font-size: 4rem;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+
+.post code{
+    background-color: #b4b4b4;
+    color: #fafafa;
+}
+
 
 /*-- SOCIAL MEDIA --*/
 .social-media{
@@ -125,43 +160,6 @@ body{background-color: #fafafa;}
     color: #000;
 }
 
-/*-- BLOG --*/
-/*-- header --*/
-.blog{
-    padding: 5rem 10rem 4rem 10rem ;
-}
-
-.blog h1{
-    font-size: 5rem;
-}
-
-.blog p{
-    font-size: 2.8rem;
-}
-/*-- blog posts --*/
-.blog-post {
-    margin: 2rem 6rem 0 6rem;
-    padding:2rem ;
-}
-
-.blog-post a{
-    text-decoration: none;
-}
-
-
-.blog-post h1{
-    font-size: 4rem;
-    color: #000;
-}
-
-.blog-post p{
-    font-size: 2.8rem;
-    padding: 2rem;
-    border-radius: 2rem;
-    background-color: #fff;
-    color: rgb(95, 95, 95);
-}
-
 /*-- FOOTER --*/
 .footer {
     background-color: #fff;
@@ -181,4 +179,3 @@ body{background-color: #fafafa;}
 .footer a:hover{
     color: #000 ;
 }
-
