@@ -18,9 +18,12 @@
 
 <body>
     <span class="header">
-        <a href="index.html"><p>Home</p></a>
+        <a href="index.html"><span>Home</span></a>
+        <div class="wrapper">
+            <input  onclick="myFunction()" type="checkbox" name="checkbox" class="switch">
+            </div>
     </span>
-    
+
     <div class="intro-and-photo-cont">
         <div class="intro-cont">
             <span class="header-typed"></span>
@@ -71,6 +74,14 @@
         <a href="https://github.com/miljkovicjovan"><i class="fab fa-github"></i></a>
         <a href="https://dev.to/miljkovicjovan"><i class="fab fa-dev"></i></a>
     </span>
+
+    
+
+    <script>
+    function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }</script>
 
     <!-- Add this script for successful  
         implementation of typed.js -->
