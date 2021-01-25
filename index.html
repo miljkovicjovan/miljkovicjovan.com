@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width:device-width, initial-scale:1.0">
+    <title>Jovan Miljkovic</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- for icons -->
+    <script src="https://kit.fontawesome.com/b7c66f5c82.js" crossorigin="anonymous"></script>
+    <!-- Needed for typed.js -->
+    <!-- typed.min.js file from typed.js folder -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Add jquery cdn -->
+    <script src="./typed.js-master/lib/typed.min.js"></script>
+</head>
+
+
+<body>
+
+    <span class="header">
+        <a href="index.html"><p>Home</p></a>
+    </span>
+
+    <div class="intro-and-photo-cont">
+        <div class="intro-cont">
+            <span class="header-typed"></span>
+            <p>Welcome to my <b><u>digital journal</u></b> ! On this site I document everything I learned and created. You may expect to see <b>minimum 3 articles per week </b>.</p>
+        </div>
+        <div class="photo-cont">
+            <img src="images/profile.jpg" alt="photo of me">
+        </div>
+    </div>
+
+    <span class="social-media">
+        <a href="https://twitter.com/miljkovicjovann"><i class="fab fa-twitter" ></i></a>
+        <a href="https://www.instagram.com/miljkovicjovan/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/miljkovicjovan"><i class="fab fa-github"></i></a>
+        <a href="https://dev.to/miljkovicjovan"><i class="fab fa-dev"></i></a>
+    </span>
+
+
+    <div class="blog">
+        <h1>Blog</h1>
+        <hr>
+        <p>Personal autobiography: 100% authentic, good for inspiration, my learning path, not ideal but 100% <b>mine</b>.</p>
+    </div>
+
+    <div class="blog-post"><!--post 2-->
+        <a href="#">
+        <h1>Making a Typewriter effect for your Website using Typed.js library</h1>
+        <p>I want my Header to consist of a text like: Hey, I'm Jovan. Simple and to the point. However I thought of a cool idea to use a JS library called Typed.js...(Read more)
+        </p>
+        </a>
+    </div>
+
+    <div class="blog-post"><!--post 1-->
+        <a href="post1.html">
+        <h1>"Hello World!" My first post!</h1>
+        <p>Hello World! I’m Jovan, I’ve recently started my journey in learning coding and thought I’d introduce...(Read more)
+        </p>
+        </a>
+    </div>
+
+    
+    <span class="footer">
+        <p><a href="https://instagram.com/miljkovicjovan/"> <br>&copy;Jovan Miljkovic</a> - 2021</p>
+    </span>
+    <span class="social-media" style="padding-bottom: 5rem;">
+        <a href="https://twitter.com/miljkovicjovann"><i class="fab fa-twitter" ></i></a>
+        <a href="https://www.instagram.com/miljkovicjovan/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/miljkovicjovan"><i class="fab fa-github"></i></a>
+        <a href="https://dev.to/miljkovicjovan"><i class="fab fa-dev"></i></a>
+    </span>
+
+    <!-- Add this script for successful  
+        implementation of typed.js -->
+        <script> 
+            var typed = new Typed('.header-typed', {
+            strings: ["Hey, I'm Jovan.", "Hey, I'm a Software Engineer", "Hey, I'm a Web Developer", "Hey, I'm a student", "Hey, I'm Jovan."],
+            typeSpeed: 90 ,
+            backSpeed: 40
+        });
+        </script>
+
+</body>
+
+</html>
