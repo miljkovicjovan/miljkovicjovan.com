@@ -219,11 +219,13 @@ box-shadow: 0px 0px 10px #f5deb4,
 /*-- INTRO AND PHOTO --*/
 .intro-and-photo-cont{
     margin-top: 15rem;
+    text-align: center;
 }
 
 .intro-cont {
     width: 40rem;
     padding: 0 10rem 0 10rem;
+    text-align: left;
 }
 
 /*-- the typing effect --*/
@@ -240,7 +242,7 @@ box-shadow: 0px 0px 10px #f5deb4,
 
 .intro-cont p {
     font-size: 2rem;
-    background-color: #fff;
+    background-color: #e7c58b;
     padding: 2rem;
     border-radius: 2rem;
     font-size: 3.2rem;
@@ -263,7 +265,7 @@ box-shadow: 0px 0px 10px #f5deb4,
 
 /*-- SOCIAL MEDIA --*/
 .social-media{
-    padding-left: 16rem;
+    padding: 2rem;
 }
 
 .social-media i{
@@ -293,9 +295,13 @@ box-shadow: 0px 0px 10px #f5deb4,
 }
 
 /*-- BLOG --*/
+.blog-wrapper {
+    text-align: center;
+}
 /*-- header --*/
 .blog{
     padding: 5rem 10rem 4rem 10rem ;
+    text-align: left;
 }
 
 .blog h1{
@@ -325,17 +331,17 @@ box-shadow: 0px 0px 10px #f5deb4,
     font-size: 2.8rem;
     padding: 2rem;
     border-radius: 2rem;
-    background-color: #fff;
+    background-color: #e7c58b;
     color: rgb(95, 95, 95);
 }
 
 /*-- FOOTER --*/
 .footer {
     background-color: #fff;
+    text-align: center;
 }
 
 .footer p {
-    padding: 0 8rem 0 14rem;
     font-size: 3rem;
     color: #000;
 }
@@ -356,12 +362,12 @@ box-shadow: 0px 0px 10px #f5deb4,
     background-color: rgb(7, 7, 7);
 }
 
-.darkFooter p{
-    color: rgb(145, 142, 142);
-}
-
 .darkFooter a{
     color: rgb(216, 214, 214);
+}
+
+.darkFooter p{
+    color: rgb(255, 255, 255);
 }
 
 .darkFooter a:hover{

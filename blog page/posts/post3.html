@@ -14,6 +14,9 @@
 <body>
     <span class="header">
         <a href="../index.html"><p>Home</p></a>
+        <span class="wrapper">
+            <input  onclick="myFunction()" type="checkbox" name="checkbox" class="switch">
+        </span>
     </span>
     
     <div class="hero">
@@ -32,65 +35,70 @@
         </span>
     </div>
     
-    <div class="post">
-        <br>
-        <p>In the process of making my personal website I played around making an interactive switch for Dark/Light modes of my website. So I am going to present you <b>my solution</b> and If you like it you can <i>see the steps</i> of how I build it using vanilla JavaScript.</p>
-        <h1>What we are making</h1> <br>
-        <img src="images/post3/Screen-Recording-1-26-2021-12-58.gif" alt="final product">
-        <h2>Steps</h2>
-        <h3>1. Make your static website</h3>
-        <p>Pretty simple design, in this post we will focus more on the switch and not on the look of the website. Make sure to include some text so we can see the change between the dark mode and light mode and don't forget the input. This is what I made:</p> <br>
-        <p class="codepen" data-height="418" data-theme-id="dark" data-default-tab="html,result" data-user="miljkovicjovan" data-slug-hash="WNGVwwX" style="height: 418px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="post3.1">
-        <span>See the Pen <a href="https://codepen.io/miljkovicjovan/pen/WNGVwwX">
-        post3.1</a> by Jovan M. (<a href="https://codepen.io/miljkovicjovan">@miljkovicjovan</a>)
-        on <a href="https://codepen.io">CodePen</a>.</span>
-        </p>
-        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-        <h3>2. Make Function to toggle .dark-mode with input</h3>
-        <p>We will use an onclick function that will apply the <b>.dark-mode</b> CSS rules to our website. It is easy and looks something like this: <br> <br>
-        <code style="font-size: 2.5rem;">function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-          }
-        </code> <br> <br>
-        <b>Don't forget</b> to add the <code>onclick="myFunction()"</code> part in the input tag. Looks like this :
-        </p>
-        <p class="codepen" data-height="415" data-theme-id="dark" data-default-tab="html,result" data-user="miljkovicjovan" data-slug-hash="wvzVGeP" style="height: 415px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="post3.2">
-        <span>See the Pen <a href="https://codepen.io/miljkovicjovan/pen/wvzVGeP">
-        post3.2</a> by Jovan M. (<a href="https://codepen.io/miljkovicjovan">@miljkovicjovan</a>)
-        on <a href="https://codepen.io">CodePen</a>.</span>
-        </p>
-        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-        <p>So we made the dark mode switch but let's start customizing it in CSS and making it look more like a switch
-        .</p>
-        <h3>3. Customization in CSS</h3>
-        <p>First I made the switch look like an actual switch and played around with the colors schemes until I found a pretty good one. Then I researched a bit how to make <code>content: ''</code>  into a sun and a moon so I could make a cool animation like switching from <b>daytime to nightime</b>. I played around and found the best design for each and the best colors. The only thing left was to use an <code>animation</code> and use <code>keyframes</code> to "animate" the sun and moon. And after around a half our of work it was done. Here is the code:
-        </p>
-        <p class="codepen" data-height="446" data-theme-id="dark" data-default-tab="css,result" data-user="miljkovicjovan" data-slug-hash="LYRwZYx" style="height: 446px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="post3.3">
-        <span>See the Pen <a href="https://codepen.io/miljkovicjovan/pen/LYRwZYx">
-        post3.3</a> by Jovan M. (<a href="https://codepen.io/miljkovicjovan">@miljkovicjovan</a>)
-        on <a href="https://codepen.io">CodePen</a>.</span>
-        </p>
-        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-        <p><b>You can get the whole folder here</b></p>
-        <a href="https://github.com/miljkovicjovan/darkmodeswitch">GitHub</a> <br>
-        <h2>Thank you for reading!</h2>
-        <p>I hope this article helps you and becomes useful, any critism is accepted and I encourage you to ask any questions in the comments.</p>
-        <p>Thanks again,</p>
-        <p>Stay safe,</p>
-        <p>~Jovan</p>
+    <div style="text-align: center;">
+        <div class="post">
+            <br>
+            <p>In the process of making my personal website I played around making an interactive switch for Dark/Light modes of my website. So I am going to present you <b>my solution</b> and If you like it you can <i>see the steps</i> of how I build it using vanilla JavaScript.</p>
+            <h1>What we are making</h1> <br>
+            <img src="images/post3/Screen-Recording-1-26-2021-12-58.gif" alt="final product">
+            <h2>Steps</h2>
+            <h3>1. Make your static website</h3>
+            <p>Pretty simple design, in this post we will focus more on the switch and not on the look of the website. Make sure to include some text so we can see the change between the dark mode and light mode and don't forget the input. This is what I made:</p> <br>
+            <p class="codepen" data-height="418" data-theme-id="dark" data-default-tab="html,result" data-user="miljkovicjovan" data-slug-hash="WNGVwwX" style="height: 418px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="post3.1">
+            <span>See the Pen <a href="https://codepen.io/miljkovicjovan/pen/WNGVwwX">
+            post3.1</a> by Jovan M. (<a href="https://codepen.io/miljkovicjovan">@miljkovicjovan</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <h3>2. Make Function to toggle .dark-mode with input</h3>
+            <p>We will use an onclick function that will apply the <b>.dark-mode</b> CSS rules to our website. It is easy and looks something like this: <br> <br>
+            <code style="font-size: 2.5rem;">function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+            </code> <br> <br>
+            <b>Don't forget</b> to add the <code>onclick="myFunction()"</code> part in the input tag. Looks like this :
+            </p>
+            <p class="codepen" data-height="415" data-theme-id="dark" data-default-tab="html,result" data-user="miljkovicjovan" data-slug-hash="wvzVGeP" style="height: 415px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="post3.2">
+            <span>See the Pen <a href="https://codepen.io/miljkovicjovan/pen/wvzVGeP">
+            post3.2</a> by Jovan M. (<a href="https://codepen.io/miljkovicjovan">@miljkovicjovan</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <p>So we made the dark mode switch but let's start customizing it in CSS and making it look more like a switch
+            .</p>
+            <h3>3. Customization in CSS</h3>
+            <p>First I made the switch look like an actual switch and played around with the colors schemes until I found a pretty good one. Then I researched a bit how to make <code>content: ''</code>  into a sun and a moon so I could make a cool animation like switching from <b>daytime to nightime</b>. I played around and found the best design for each and the best colors. The only thing left was to use an <code>animation</code> and use <code>keyframes</code> to "animate" the sun and moon. And after around a half our of work it was done. Here is the code:
+            </p>
+            <p class="codepen" data-height="446" data-theme-id="dark" data-default-tab="css,result" data-user="miljkovicjovan" data-slug-hash="LYRwZYx" style="height: 446px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="post3.3">
+            <span>See the Pen <a href="https://codepen.io/miljkovicjovan/pen/LYRwZYx">
+            post3.3</a> by Jovan M. (<a href="https://codepen.io/miljkovicjovan">@miljkovicjovan</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <p><b>You can get the whole folder here</b>
+            <a href="https://github.com/miljkovicjovan/darkmodeswitch">GitHub</a></p> <br>
+            <h2>Thank you for reading!</h2>
+            <p>I hope this article helps you and becomes useful, any critism is accepted and I encourage you to ask any questions in the comments.</p>
+            <p>Thanks again,</p>
+            <p>Stay safe,</p>
+            <p>~Jovan</p>
+        </div>
     </div>
 
     <span class="footer">
         <p><a href="https://instagram.com/miljkovicjovan/"> <br>&copy;Jovan Miljkovic</a> - 2021</p>
     </span>
-    <span class="social-media" style="padding-bottom: 5rem;">
-        <a href="https://twitter.com/miljkovicjovann"><i class="fab fa-twitter" ></i></a>
-        <a href="https://www.instagram.com/miljkovicjovan/"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/miljkovicjovan"><i class="fab fa-github"></i></a>
-        <a href="https://dev.to/miljkovicjovan"><i class="fab fa-dev"></i></a>
-    </span>
+    <div style="text-align: center;">
+        <span class="social-media" style="padding-bottom: 5rem;">
+            <a href="https://twitter.com/miljkovicjovann"><i class="fab fa-twitter" ></i></a>
+            <a href="https://www.instagram.com/miljkovicjovan/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/miljkovicjovan"><i class="fab fa-github"></i></a>
+            <a href="https://dev.to/miljkovicjovan"><i class="fab fa-dev"></i></a>
+        </span>
+    </div>
 
+    <script src="../js/darkmode.js"></script>
 </body>
 
 </html>

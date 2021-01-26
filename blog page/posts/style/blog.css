@@ -48,20 +48,182 @@ body{background-color: #fafafa;}
     color: rgb(150, 144, 144);
 }
 
+/*-- MAking the switch for dark mode --*/
+/*----------- CONTINUE HERE make all px to rem ------------------ after that fix the dark mode */
+.wrapper {
+    position: fixed;
+    top:6.5rem;
+    right:1.8rem;
+    transform: translate(-50%, -50%);
+}
+
+.switch {
+position: relative;
+width: 8rem;
+height: 3rem;
+margin: 0;
+appearance: none;
+-webkit-appearance: none;
+border-radius: 25px;
+box-shadow: inset 5px 4px 5px rgba(8, 8, 8, 0.7);
+outline: none;
+cursor: pointer;
+overflow: hidden;
+background-color: #ffffff;
+}
+
+
+.switch:after{
+content: '';
+width: 46px;
+height:46px;
+border-radius: 50%;
+background-color: rgb(83, 83, 83);
+position: absolute;
+left: 2px;
+top: 2px;
+transform: translateX(0px);
+animation: off .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+box-shadow: inset 5px -5px 4px rgba(53, 53, 53, 0.3);
+}
+
+@keyframes off{
+0%{
+    transform: translateX(80px);
+    width: 46px;
+}
+50%{
+    width: 75px;  
+    border-radius: 25px;   
+}
+100%{
+    transform: translateX(0px); 
+    width: 46px;
+}
+}
+
+
+
+.switch:checked:after{
+animation: on .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+box-shadow: inset -5px -5px 4px rgba(53, 53, 53, 0.3);
+}
+
+@keyframes on{
+0%{
+    transform: translateX(0px);
+    width: 46px;
+}
+50%{
+    width: 75px;  
+    border-radius: 25px;   
+}
+100%{
+    transform: translateX(80px); 
+    width: 46px;
+}
+}
+
+
+.switch:checked:before{
+content: '';
+width: 15px;
+height: 15px;
+border-radius: 50%;
+position: absolute;
+left: 15px;
+top: 5px;
+transform-origin: 53px 10px;
+background-color: transparent;
+box-shadow: 5px -1px 0px rgb(63, 62, 62);
+filter: blur(0px);
+animation: sun .7s forwards ease;
+}
+@keyframes sun{
+0%{
+    transform: rotate(170deg);
+    background-color: transparent;
+    box-shadow: 5px -1px 0px rgb(95, 93, 93);
+    filter: blur(0px);
+}
+50%{
+    background-color: transparent;
+    box-shadow: 5px -1px 0px rgb(102, 101, 101);
+    filter: blur(0px);
+}
+90%{
+    background-color: #e7bc70;
+    box-shadow: 0px 0px 10px #e7bc70,
+    0px 0px 20px #e7bc70,
+    0px 0px 30px #e7bc70,
+        inset 0px 0px 2px #e7bc70;
+        filter: blur(1px);
+}
+100%{
+    transform: rotate(0deg);
+    background-color: #e7bc70;
+    box-shadow: 0px 0px 10px #e7bc70,
+    0px 0px 20px #e7bc70,
+    0px 0px 30px #e7bc70,
+        inset 0px 0px 2px #e7bc70;
+        filter: blur(1px);
+}
+}
+
+
+
+.switch:before{
+content: '';
+width: 15px;
+height: 15px;
+border-radius: 50%;
+position: absolute;
+left: 15px;
+top: 5px;
+filter: blur(1px);
+background-color: #f5daaa;
+box-shadow: 0px 0px 10px #f5deb4,
+0px 0px 20px #f5deb4,
+0px 0px 30px #f5deb4,
+    inset 0px 0px 2px #efd3a3;
+    transform-origin: 53px 10px;
+    animation: moon .7s forwards ease;
+}
+@keyframes moon{
+0%{
+    transform: rotate(0deg);
+    filter: blur(1px);
+}
+50%{
+    filter: blur(1px);
+}
+90%{
+    background-color: transparent;
+    box-shadow: 5px -1px 0px rgb(39, 38, 38);
+    filter: blur(0px);
+
+}
+100%{
+    transform: rotate(170deg);
+    background-color: transparent;
+    box-shadow: 5px -1px 0px rgb(39, 38, 38);
+    filter: blur(0px);
+}
+}
+/*---------------  end of the switch -----------*/
+
+
 /*-------------------- HERO --------------------*/
 .hero {
     margin-top: 15rem;
-    padding: 0 5rem 0 0;
+    text-align: center;
 }
 
 /*--header--*/
-.post-header{
-    text-align: center;
-    padding-left: 3rem;
-}
 .post-header h1{
     font-size: 5rem;
-    padding-left: 2rem;
+    width: 85%;
+    padding: 0 7.5% 0 7.5%;
 }
 
 /*--by who--*/
@@ -71,7 +233,6 @@ body{background-color: #fafafa;}
     display: flex;
 }
 .by-who img{
-    margin-left: 3rem;
     height: 6rem;
     border-radius: 2rem;
     margin: 2rem;
@@ -82,9 +243,7 @@ body{background-color: #fafafa;}
 }
 
 /*--tags--*/
-.tags{
-    margin-left: 1rem;
-}
+
 .tags span{
     margin-left: 2rem;
     font-size: 2.5rem;
@@ -143,14 +302,11 @@ body{background-color: #fafafa;}
 
 
 /*-- SOCIAL MEDIA --*/
-.social-media{
-    padding-left: 16rem;
-}
 
 .social-media i{
     font-size: 4rem;
-    padding-right: 4rem;
     transition: all 0.4s;
+    padding-right: 4rem;
 }
 
 .social-media a {
@@ -176,10 +332,10 @@ body{background-color: #fafafa;}
 /*-- FOOTER --*/
 .footer {
     background-color: #fff;
+    text-align: center;
 }
 
 .footer p {
-    padding: 0 8rem 0 14rem;
     font-size: 3rem;
     color: #000;
 }
@@ -191,4 +347,25 @@ body{background-color: #fafafa;}
 
 .footer a:hover{
     color: #000 ;
+}
+
+/* ---------- DARK MODE ------------ */
+.darkFooter{
+    background-color: rgb(7, 7, 7);
+}
+
+.darkFooter a{
+    color: rgb(216, 214, 214);
+}
+
+.darkFooter p{
+    color: rgb(255, 255, 255);
+}
+
+.darkFooter a:hover{
+    color: rgb(167, 161, 161);
+}
+
+.darkFooter h1{
+    color: white;
 }
