@@ -1,20 +1,22 @@
 
-/*-- IMPORTS --*/
+/*------------------------ IMPORTS ------------------------*/
+/*------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-    /*normal font*/
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-/*-- HTML --*/
+/*------------------------ HTML ------------------------*/
+/*------------------------------------------------------------------*/
 ul{
     margin-block-end: 0;
     margin-block-start: 0;
 }
+
 h1{
     margin-block-end: 0;
     margin-block-start: 0;
 }
-/*-- BODY --*/
 
+/*------------------------ BODY ------------------------*/
+/*------------------------------------------------------------------*/
 /*font family*/
 body{font-family:'Roboto' , sans-serif;}
 
@@ -24,7 +26,8 @@ body{padding: 0; margin: 0;}
 /*background color*/
 body{background-color: #fafafa;}
 
-/*-- HEADER --*/
+/*------------------------ HEADER ------------------------*/
+/*------------------------------------------------------------------*/
 .header{
     position: fixed;
     top: 0;
@@ -48,8 +51,8 @@ body{background-color: #fafafa;}
     color: rgb(150, 144, 144);
 }
 
-/*-- MAking the switch for dark mode --*/
-/*----------- CONTINUE HERE make all px to rem ------------------ after that fix the dark mode */
+/*------------------------ DARK MODE SWITCH ------------------------*/
+/*------------------------------------------------------------------*/
 .wrapper {
     position: fixed;
     top:6.5rem;
@@ -58,162 +61,159 @@ body{background-color: #fafafa;}
 }
 
 .switch {
-position: relative;
-width: 8rem;
-height: 3rem;
-margin: 0;
-appearance: none;
--webkit-appearance: none;
-border-radius: 25px;
-box-shadow: inset 5px 4px 5px rgba(8, 8, 8, 0.7);
-outline: none;
-cursor: pointer;
-overflow: hidden;
-background-color: #ffffff;
+    position: relative;
+    width: 8rem;
+    height: 3rem;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 10rem;
+    box-shadow: inset 0.3rem 0.3rem 0.3rem rgba(8, 8, 8, 0.7);
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #ffffff;
 }
 
-
 .switch:after{
-content: '';
-width: 46px;
-height:46px;
-border-radius: 50%;
-background-color: rgb(83, 83, 83);
-position: absolute;
-left: 2px;
-top: 2px;
-transform: translateX(0px);
-animation: off .7s forwards cubic-bezier(.8, .5, .2, 1.4);
-box-shadow: inset 5px -5px 4px rgba(53, 53, 53, 0.3);
+    content: '';
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    background-color: rgb(83, 83, 83);
+    position: absolute;
+    left: 0.1rem;
+    top: 0.1rem;
+    transform: translateX(0px);
+    animation: off .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+    box-shadow: inset 0.3rem 0.3rem 0.3rem rgba(53, 53, 53, 0.3);
 }
 
 @keyframes off{
-0%{
-    transform: translateX(80px);
-    width: 46px;
+    0%{
+        transform: translateX(5rem);
+        width: 2.9rem;
+    }
+    50%{
+        width: 3.4rem;  
+        border-radius: 1.6rem;   
+    }
+    100%{
+        transform: translateX(0px); 
+        width: 2.9rem;
+    }
 }
-50%{
-    width: 75px;  
-    border-radius: 25px;   
-}
-100%{
-    transform: translateX(0px); 
-    width: 46px;
-}
-}
-
-
 
 .switch:checked:after{
-animation: on .7s forwards cubic-bezier(.8, .5, .2, 1.4);
-box-shadow: inset -5px -5px 4px rgba(53, 53, 53, 0.3);
+    animation: on .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+    box-shadow: inset 0.3rem 0.3rem 0.3rem rgba(53, 53, 53, 0.3);
 }
 
 @keyframes on{
-0%{
-    transform: translateX(0px);
-    width: 46px;
+    0%{
+        transform: translateX(0px);
+        width: 2.9rem;
+    }
+    50%{
+        width: 3.4rem;  
+        border-radius: 1.6rem;   
+    }
+    100%{
+        transform: translateX(5rem); 
+        width: 2.9rem;
+    }
 }
-50%{
-    width: 75px;  
-    border-radius: 25px;   
-}
-100%{
-    transform: translateX(80px); 
-    width: 46px;
-}
-}
-
 
 .switch:checked:before{
-content: '';
-width: 15px;
-height: 15px;
-border-radius: 50%;
-position: absolute;
-left: 15px;
-top: 5px;
-transform-origin: 53px 10px;
-background-color: transparent;
-box-shadow: 5px -1px 0px rgb(63, 62, 62);
-filter: blur(0px);
-animation: sun .7s forwards ease;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 1rem;
+    top: 0.3rem;
+    transform-origin: 3rem 0.6rem;
+    background-color: transparent;
+    box-shadow: 3rem 2rem 0px rgb(63, 62, 62);
+    filter: blur(0px);
+    animation: sun .7s forwards ease;
 }
+
 @keyframes sun{
-0%{
-    transform: rotate(170deg);
-    background-color: transparent;
-    box-shadow: 5px -1px 0px rgb(95, 93, 93);
-    filter: blur(0px);
+    0%{
+        transform: rotate(170deg);
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(95, 93, 93);
+        filter: blur(0px);
+    }
+    50%{
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(102, 101, 101);
+        filter: blur(0px);
+    }
+    90%{
+        background-color: #e7bc70;
+        box-shadow: 0px 0px 10px #e7bc70,
+        0px 0px 20px #e7bc70,
+        0px 0px 30px #e7bc70,
+            inset 0px 0px 2px #e7bc70;
+            filter: blur(1px);
+    }
+    100%{
+        transform: rotate(0deg);
+        background-color: #e7bc70;
+        box-shadow: 0px 0px 10px #e7bc70,
+        0px 0px 20px #e7bc70,
+        0px 0px 30px #e7bc70,
+            inset 0px 0px 2px #e7bc70;
+            filter: blur(1px);
+    }
 }
-50%{
-    background-color: transparent;
-    box-shadow: 5px -1px 0px rgb(102, 101, 101);
-    filter: blur(0px);
-}
-90%{
-    background-color: #e7bc70;
-    box-shadow: 0px 0px 10px #e7bc70,
-    0px 0px 20px #e7bc70,
-    0px 0px 30px #e7bc70,
-        inset 0px 0px 2px #e7bc70;
-        filter: blur(1px);
-}
-100%{
-    transform: rotate(0deg);
-    background-color: #e7bc70;
-    box-shadow: 0px 0px 10px #e7bc70,
-    0px 0px 20px #e7bc70,
-    0px 0px 30px #e7bc70,
-        inset 0px 0px 2px #e7bc70;
-        filter: blur(1px);
-}
-}
-
-
 
 .switch:before{
-content: '';
-width: 15px;
-height: 15px;
-border-radius: 50%;
-position: absolute;
-left: 15px;
-top: 5px;
-filter: blur(1px);
-background-color: #f5daaa;
-box-shadow: 0px 0px 10px #f5deb4,
-0px 0px 20px #f5deb4,
-0px 0px 30px #f5deb4,
-    inset 0px 0px 2px #efd3a3;
-    transform-origin: 53px 10px;
-    animation: moon .7s forwards ease;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 1rem;
+    top: 0.3rem;
+    filter: blur(1px);
+    background-color: #f5daaa;
+    box-shadow: 0px 0px 10px #f5deb4,
+    0px 0px 20px #f5deb4,
+    0px 0px 30px #f5deb4,
+        inset 0px 0px 2px #efd3a3;
+        transform-origin: 3rem 0.6rem;
+        animation: moon .7s forwards ease;
 }
+
 @keyframes moon{
-0%{
-    transform: rotate(0deg);
-    filter: blur(1px);
-}
-50%{
-    filter: blur(1px);
-}
-90%{
-    background-color: transparent;
-    box-shadow: 5px -1px 0px rgb(39, 38, 38);
-    filter: blur(0px);
+    0%{
+        transform: rotate(0deg);
+        filter: blur(1px);
+    }
+    50%{
+        filter: blur(1px);
+    }
+    90%{
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(39, 38, 38);
+        filter: blur(0px);
 
+    }
+    100%{
+        transform: rotate(170deg);
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(39, 38, 38);
+        filter: blur(0px);
+    }
 }
-100%{
-    transform: rotate(170deg);
-    background-color: transparent;
-    box-shadow: 5px -1px 0px rgb(39, 38, 38);
-    filter: blur(0px);
-}
-}
-/*---------------  end of the switch -----------*/
+/*----------------------------------------------*/
 
 
-/*-------------------- HERO --------------------*/
+/*------------------------ HERO ------------------------*/
+/*------------------------------------------------------*/
 .hero {
     margin-top: 15rem;
     text-align: center;
@@ -232,18 +232,19 @@ box-shadow: 0px 0px 10px #f5deb4,
     padding-bottom: 2rem;
     display: flex;
 }
+
 .by-who img{
     height: 6rem;
     border-radius: 2rem;
     margin: 2rem;
 }
+
 .by-who p{
     font-size: 2.8rem;
     padding: 1rem 0 0 0;
 }
 
 /*--tags--*/
-
 .tags span{
     margin-left: 2rem;
     font-size: 2.5rem;
@@ -300,9 +301,8 @@ box-shadow: 0px 0px 10px #f5deb4,
     color: #fafafa;
 }
 
-
-/*-- SOCIAL MEDIA --*/
-
+/*------------------------ SOCIAL ------------------------*/
+/*--------------------------------------------------------*/
 .social-media i{
     font-size: 4rem;
     transition: all 0.4s;
@@ -329,7 +329,8 @@ box-shadow: 0px 0px 10px #f5deb4,
     color: #000;
 }
 
-/*-- FOOTER --*/
+/*------------------------ FOOTER ------------------------*/
+/*--------------------------------------------------------*/
 .footer {
     background-color: #fff;
     text-align: center;
@@ -349,7 +350,8 @@ box-shadow: 0px 0px 10px #f5deb4,
     color: #000 ;
 }
 
-/* ---------- DARK MODE ------------ */
+/*------------------------ DARKMODE ------------------------*/
+/*----------------------------------------------------------*/
 .darkFooter{
     background-color: rgb(7, 7, 7);
 }

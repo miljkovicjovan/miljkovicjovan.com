@@ -1,20 +1,22 @@
 
-/*-- IMPORTS --*/
+/*------------------------ IMPORTS ------------------------*/
+/*---------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-    /*normal font*/
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-/*-- HTML --*/
+/*------------------------ HTML ------------------------*/
+/*------------------------------------------------------*/
 ul{
     margin-block-end: 0;
     margin-block-start: 0;
 }
+
 h1{
     margin-block-end: 0;
     margin-block-start: 0;
 }
-/*-- BODY --*/
 
+/*------------------------ BODY ------------------------*/
+/*------------------------------------------------------*/
 /*font family*/
 body{font-family:'Roboto' , sans-serif;}
 
@@ -23,13 +25,19 @@ body{padding: 0; margin: 0;}
 
 /*background color*/
 body{background-color: #fafafa;}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------ RESPONSIVE ------------------------*/
+/*-------------------------- DESIGN --------------------------*/
+/*------------------------- MONITORS -------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
 
-/*---------------------------------------------------*/
-/*-- HEADER --*/
+/*------------------------ HEADER ------------------------*/
+/*--------------------------------------------------------*/
 .header{
     position: fixed;
     top: 0;
-    left: 1.8rem;
     backdrop-filter: saturate(1.8) blur(5px);
     width: 100%;
 }
@@ -50,8 +58,8 @@ body{background-color: #fafafa;}
     color: rgb(150, 144, 144);
 }
 
-/*-- MAking the switch for dark mode --*/
-/*----------- CONTINUE HERE make all px to rem ------------------ after that fix the dark mode */
+/*------------------------ DARK MODE SWITCH ------------------------*/
+/*------------------------------------------------------------------*/
 .wrapper {
     position: fixed;
     top:6.5rem;
@@ -60,172 +68,161 @@ body{background-color: #fafafa;}
 }
 
 .switch {
-position: relative;
-width: 8rem;
-height: 3rem;
-margin: 0;
-appearance: none;
--webkit-appearance: none;
-border-radius: 25px;
-box-shadow: inset 5px 4px 5px rgba(8, 8, 8, 0.7);
-outline: none;
-cursor: pointer;
-overflow: hidden;
-background-color: #ffffff;
+    position: relative;
+    width: 8rem;
+    height: 3rem;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 10rem;
+    box-shadow: inset 0.3rem 0.3rem 0.3rem rgba(8, 8, 8, 0.7);
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #ffffff;
 }
 
-
 .switch:after{
-content: '';
-width: 46px;
-height:46px;
-border-radius: 50%;
-background-color: rgb(83, 83, 83);
-position: absolute;
-left: 2px;
-top: 2px;
-transform: translateX(0px);
-animation: off .7s forwards cubic-bezier(.8, .5, .2, 1.4);
-box-shadow: inset 5px -5px 4px rgba(53, 53, 53, 0.3);
+    content: '';
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    background-color: rgb(83, 83, 83);
+    position: absolute;
+    left: 0.1rem;
+    top: 0.1rem;
+    transform: translateX(0px);
+    animation: off .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+    box-shadow: inset 0.3rem 0.3rem 0.3rem rgba(53, 53, 53, 0.3);
 }
 
 @keyframes off{
-0%{
-    transform: translateX(80px);
-    width: 46px;
+    0%{
+        transform: translateX(5rem);
+        width: 2.9rem;
+    }
+    50%{
+        width: 3.4rem;  
+        border-radius: 1.6rem;   
+    }
+    100%{
+        transform: translateX(0px); 
+        width: 2.9rem;
+    }
 }
-50%{
-    width: 75px;  
-    border-radius: 25px;   
-}
-100%{
-    transform: translateX(0px); 
-    width: 46px;
-}
-}
-
-
 
 .switch:checked:after{
-animation: on .7s forwards cubic-bezier(.8, .5, .2, 1.4);
-box-shadow: inset -5px -5px 4px rgba(53, 53, 53, 0.3);
+    animation: on .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+    box-shadow: inset 0.3rem 0.3rem 0.3rem rgba(53, 53, 53, 0.3);
 }
 
 @keyframes on{
-0%{
-    transform: translateX(0px);
-    width: 46px;
+    0%{
+        transform: translateX(0px);
+        width: 2.9rem;
+    }
+    50%{
+        width: 3.4rem;  
+        border-radius: 1.6rem;   
+    }
+    100%{
+        transform: translateX(5rem); 
+        width: 2.9rem;
+    }
 }
-50%{
-    width: 75px;  
-    border-radius: 25px;   
-}
-100%{
-    transform: translateX(80px); 
-    width: 46px;
-}
-}
-
 
 .switch:checked:before{
-content: '';
-width: 15px;
-height: 15px;
-border-radius: 50%;
-position: absolute;
-left: 15px;
-top: 5px;
-transform-origin: 53px 10px;
-background-color: transparent;
-box-shadow: 5px -1px 0px rgb(63, 62, 62);
-filter: blur(0px);
-animation: sun .7s forwards ease;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 1rem;
+    top: 0.3rem;
+    transform-origin: 3rem 0.6rem;
+    background-color: transparent;
+    box-shadow: 3rem 2rem 0px rgb(63, 62, 62);
+    filter: blur(0px);
+    animation: sun .7s forwards ease;
 }
+
 @keyframes sun{
-0%{
-    transform: rotate(170deg);
-    background-color: transparent;
-    box-shadow: 5px -1px 0px rgb(95, 93, 93);
-    filter: blur(0px);
+    0%{
+        transform: rotate(170deg);
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(95, 93, 93);
+        filter: blur(0px);
+    }
+    50%{
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(102, 101, 101);
+        filter: blur(0px);
+    }
+    90%{
+        background-color: #e7bc70;
+        box-shadow: 0px 0px 10px #e7bc70,
+        0px 0px 20px #e7bc70,
+        0px 0px 30px #e7bc70,
+            inset 0px 0px 2px #e7bc70;
+            filter: blur(1px);
+    }
+    100%{
+        transform: rotate(0deg);
+        background-color: #e7bc70;
+        box-shadow: 0px 0px 10px #e7bc70,
+        0px 0px 20px #e7bc70,
+        0px 0px 30px #e7bc70,
+            inset 0px 0px 2px #e7bc70;
+            filter: blur(1px);
+    }
 }
-50%{
-    background-color: transparent;
-    box-shadow: 5px -1px 0px rgb(102, 101, 101);
-    filter: blur(0px);
-}
-90%{
-    background-color: #e7bc70;
-    box-shadow: 0px 0px 10px #e7bc70,
-    0px 0px 20px #e7bc70,
-    0px 0px 30px #e7bc70,
-        inset 0px 0px 2px #e7bc70;
-        filter: blur(1px);
-}
-100%{
-    transform: rotate(0deg);
-    background-color: #e7bc70;
-    box-shadow: 0px 0px 10px #e7bc70,
-    0px 0px 20px #e7bc70,
-    0px 0px 30px #e7bc70,
-        inset 0px 0px 2px #e7bc70;
-        filter: blur(1px);
-}
-}
-
-
 
 .switch:before{
-content: '';
-width: 15px;
-height: 15px;
-border-radius: 50%;
-position: absolute;
-left: 15px;
-top: 5px;
-filter: blur(1px);
-background-color: #f5daaa;
-box-shadow: 0px 0px 10px #f5deb4,
-0px 0px 20px #f5deb4,
-0px 0px 30px #f5deb4,
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 1rem;
+    top: 0.3rem;
+    filter: blur(1px);
+    background-color: #f5daaa;
+    box-shadow: 0px 0px 10px #f5deb4,
+    0px 0px 20px #f5deb4,
+    0px 0px 30px #f5deb4,
     inset 0px 0px 2px #efd3a3;
-    transform-origin: 53px 10px;
+    transform-origin: 3rem 0.6rem;
     animation: moon .7s forwards ease;
 }
-@keyframes moon{
-0%{
-    transform: rotate(0deg);
-    filter: blur(1px);
-}
-50%{
-    filter: blur(1px);
-}
-90%{
-    background-color: transparent;
-    box-shadow: 5px -1px 0px rgb(39, 38, 38);
-    filter: blur(0px);
 
-}
-100%{
-    transform: rotate(170deg);
-    background-color: transparent;
-    box-shadow: 5px -1px 0px rgb(39, 38, 38);
-    filter: blur(0px);
-}
+@keyframes moon{
+    0%{
+        transform: rotate(0deg);
+        filter: blur(1px);
+    }
+    50%{
+        filter: blur(1px);
+    }
+    90%{
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(39, 38, 38);
+        filter: blur(0px);
+
+    }
+    100%{
+        transform: rotate(170deg);
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(39, 38, 38);
+        filter: blur(0px);
+    }
 }
 /*---------------  end of the switch -----------*/
 
-
-
-/*-- INTRO AND PHOTO --*/
-.intro-and-photo-cont{
-    margin-top: 15rem;
+/*------------------------ INTRO AND PHOTO CONT ------------------------*/
+/*----------------------------------------------------------------------*/
+.heading-wrapper {
     text-align: center;
-}
-
-.intro-cont {
-    width: 40rem;
-    padding: 0 10rem 0 10rem;
-    text-align: left;
+    padding-top: 11rem;
 }
 
 /*-- the typing effect --*/
@@ -240,32 +237,111 @@ box-shadow: 0px 0px 10px #f5deb4,
     color:rgb(87, 87, 87);
 }
 
-.intro-cont p {
-    font-size: 2rem;
-    background-color: #e7c58b;
-    padding: 2rem;
-    border-radius: 2rem;
-    font-size: 3.2rem;
-}
-
-.write-about-me {
-    color: rgb(87, 87, 87);
-    font-size: 3.5rem;
-}
-
-.photo-cont{
-    padding: 0 4rem 0 0;
+.photo-cont {
+    text-align: center;
 }
 
 .photo-cont img{
-    padding: 3rem 10rem 8rem 10rem;
+    padding: 5rem 0 5rem 0;
     width: 42rem;
     height: 58rem;
 }
 
-/*-- SOCIAL MEDIA --*/
+/*------------------------ BLOG------------------------*/
+/*-----------------------------------------------------*/
+.blog-wrapper {
+    text-align: center;
+}
+
+/*-- header --*/
+.blog{
+    padding: 0 15% 3rem 15%;
+    width: 70%;
+    text-align: left;
+}
+
+.blog h1{
+    font-size: 5rem;
+}
+
+.blog p{
+    font-size: 2.8rem;
+}
+
+/*-- blog posts --*/
+.blog-post {
+    width: 70%;
+    padding: 0 15% 0 15%;
+}
+
+.blog-post a{
+    text-decoration: none;
+}
+
+.blog-post h1{
+    font-size: 4rem;
+    color: #000;
+}
+
+.blog-post p{
+    font-size: 2.8rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: #e7c58b;
+    color: rgb(95, 95, 95);
+}
+
+/*------------------------ FOOTER ------------------------*/
+/*--------------------------------------------------------*/
+.footer {
+    text-align: center;
+}
+
+.footer p {
+    font-size: 3rem;
+    color: #000;
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(95, 95, 95);
+}
+
+.footer a:hover{
+    color: #000 ;
+}
+
+/*------------------------ DARK MODE SETTINGS ------------------------*/
+/*--------------------------------------------------------------------*/
+.darkFooter{
+    background-color: rgb(7, 7, 7);
+}
+
+.darkFooter a{
+    color: rgb(216, 214, 214);
+}
+
+.darkFooter p{
+    color: rgb(255, 255, 255);
+}
+
+.darkFooter a:hover{
+    color: rgb(167, 161, 161);
+}
+
+.darkFooter h1{
+    color: white;
+}
+
+.darkFooter span {
+    color: rgb(180, 179, 179);
+}
+
+/*------------------------ SOCIAL ------------------------*/
+/*--------------------------------------------------------*/
 .social-media{
     padding: 2rem;
+    padding-bottom: 5rem;
 }
 
 .social-media i{
@@ -294,103 +370,108 @@ box-shadow: 0px 0px 10px #f5deb4,
     color: rgb(151, 70, 70);
 }
 
-/*-- BLOG --*/
-.blog-wrapper {
-    text-align: center;
-}
-/*-- header --*/
-.blog{
-    padding: 5rem 10rem 4rem 10rem ;
-    text-align: left;
-}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------ RESPONSIVE ------------------------*/
+/*-------------------------- DESIGN --------------------------*/
+/*-------------------------- PHONES---------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
 
-.blog h1{
-    font-size: 5rem;
-}
+@media only screen and (min-device-width: 768px){
+    /*----------- HEADER --------------*/
+    .header span {
+        line-height: 5rem;
+    }
 
-.blog p{
-    font-size: 2.8rem;
-}
-/*-- blog posts --*/
-.blog-post {
-    margin: 2rem 6rem 0 6rem;
-    padding:2rem ;
-}
+    .header a {
+        font-size: 2.5rem;
+    }
 
-.blog-post a{
-    text-decoration: none;
-}
+    /*----------- SWITCH --------------*/
+    /*-- wrapper --*/
+    .wrapper {
+        top: 3.7rem;
+        right: -2rem;
+    }
 
+    /*----------- TYPE.js --------------*/
+    .heading-wrapper {
+        padding-top: 4.2rem;
+    }
 
-.blog-post h1{
-    font-size: 4rem;
-    color: #000;
-}
+    .header-typed {
+        font-size: 3.5rem;
+    }
 
-.blog-post p{
-    font-size: 2.8rem;
-    padding: 2rem;
-    border-radius: 2rem;
-    background-color: #e7c58b;
-    color: rgb(95, 95, 95);
-}
+    /*----------- PHOTO --------------*/
+    .photo-cont {
+        padding: 2rem 0 0 0;
+        display: inline-block;
+    }
 
-/*-- FOOTER --*/
-.footer {
-    background-color: #fff;
-    text-align: center;
-}
+    .photo-cont img {
+        width: 20rem;
+        height: 27rem;
+        padding-top: 1.8rem;
+    }
 
-.footer p {
-    font-size: 3rem;
-    color: #000;
-}
+    /*----------- BLOG --------------*/
+    .cont {
+        width: 80%;
+        padding: 0 10% 0 10%;
+    }
 
-.footer a{
-    text-decoration: none;
-    color: rgb(95, 95, 95);
-}
+    .blog {
+        padding-top: 18.5%;
+        display: inline-block;
+        width: 27%;
+        float: left;
+    }
 
-.footer a:hover{
-    color: #000 ;
-}
+    .blog h1 {
+        font-size: 3rem;
+    }
 
-
-/*--- DARK MODE SETTINGS ---*/
-
-.darkFooter{
-    background-color: rgb(7, 7, 7);
-}
-
-.darkFooter a{
-    color: rgb(216, 214, 214);
-}
-
-.darkFooter p{
-    color: rgb(255, 255, 255);
-}
-
-.darkFooter a:hover{
-    color: rgb(167, 161, 161);
-}
-
-.darkFooter h1{
-    color: white;
-}
-
-.darkFooter span {
-    color: rgb(180, 179, 179);
-}
-
-
-  
-
-
+    .blog p {
+        font-size: 1.4rem;
+    }
     
-    
-    
-    
-    
-    
-    
-    
+    /*----------- BLOG POSTS --------------*/
+    .blog-wrapper {
+        width: 70%;
+        padding: 5% 15% 0 15%;
+    }
+
+    .blog-post {
+        width: 50%;
+        padding: 0;
+        display: inline-block;
+    }
+
+    .blog-post h1 {
+        font-size: 1.6rem;
+    }
+
+    .blog-post p {
+        margin-top: 0;
+        font-size: 1.7rem;
+        margin: 3rem;
+        padding: 1rem;
+    }
+
+    /*----------- FOOTER --------------*/
+    .footer p {
+        font-size: 1.5rem;
+    }
+
+    /*----------- SOCIAL --------------*/
+    .social-media i {
+        font-size: 2rem;
+    }
+
+    .social-media {
+        padding-bottom: 1.4rem;
+    }
+
+}
