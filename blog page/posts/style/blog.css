@@ -1,0 +1,181 @@
+
+/*-- IMPORTS --*/
+
+    /*normal font*/
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/*-- HTML --*/
+ul{
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+h1{
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+/*-- BODY --*/
+
+/*font family*/
+body{font-family:'Roboto' , sans-serif;}
+
+/*padding and margin 0*/
+body{padding: 0; margin: 0;}
+
+/*background color*/
+body{background-color: #fafafa;}
+
+/*-- HEADER --*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 1.8rem;
+    backdrop-filter: saturate(1.8) blur(5px);
+    width: 100%;
+}
+
+.header p{
+    padding-left: 2rem;
+}
+
+.header a{
+    text-decoration: none;
+    font-size: 4rem;
+    color: #000;
+    transition: all 0.4s;
+}
+
+.header a:hover {
+    color: rgb(150, 144, 144);
+}
+
+/*-------------------- HERO --------------------*/
+.hero {
+    margin-top: 15rem;
+    padding: 0 5rem 0 0;
+}
+
+/*--header--*/
+.post-header{
+    text-align: center;
+}
+.post-header h1{
+    font-size: 5rem;
+}
+
+/*--by who--*/
+.by-who{
+    padding-top: 2rem ;
+    padding-bottom: 2rem;
+    display: flex;
+}
+.by-who img{
+    margin-left: 3rem;
+    height: 6rem;
+    border-radius: 2rem;
+    margin: 2rem;
+}
+.by-who p{
+    font-size: 2.8rem;
+    padding: 1rem 0 0 0;
+}
+
+/*--tags--*/
+.tags{
+    margin-left: 1rem;
+}
+.tags span{
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    width: 12rem;
+    background-color: rgb(235, 228, 228);
+    border-radius: 1rem;
+}
+
+/*-- POST --*/
+.post{
+    text-align: left;
+    padding: 5rem 5rem 0 5rem;
+}
+
+.post h1{
+    font-size: 5rem;
+}
+
+.post p{
+    font-size: 4rem;
+    color: #5a5a5a;
+}
+
+.post a{
+    text-decoration: none;
+    color: #4078c0;
+    transition: all 0.4s;
+}
+
+.post a:hover{
+    color: #00acee;
+}
+
+.post li{
+    font-size: 4rem;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+
+.post code{
+    background-color: #b4b4b4;
+    color: #fafafa;
+}
+
+
+/*-- SOCIAL MEDIA --*/
+.social-media{
+    padding-left: 16rem;
+}
+
+.social-media i{
+    font-size: 4rem;
+    padding-right: 4rem;
+    transition: all 0.4s;
+}
+
+.social-media a {
+    color: rgb(87, 87, 87);
+}
+
+.fa-twitter:hover{
+    color: #00acee;
+}
+
+.fa-instagram:hover{
+    color: #cd486b;
+}
+
+.fa-github:hover{
+    color: #4078c0
+}
+
+.fa-dev:hover{
+    color: #000;
+}
+
+/*-- FOOTER --*/
+.footer {
+    background-color: #fff;
+}
+
+.footer p {
+    padding: 0 8rem 0 14rem;
+    font-size: 3rem;
+    color: #000;
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(95, 95, 95);
+}
+
+.footer a:hover{
+    color: #000 ;
+}

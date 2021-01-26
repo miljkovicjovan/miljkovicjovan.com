@@ -1,0 +1,363 @@
+
+/*-- IMPORTS --*/
+
+    /*normal font*/
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/*-- HTML --*/
+ul{
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+h1{
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+/*-- BODY --*/
+
+/*font family*/
+body{font-family:'Roboto' , sans-serif;}
+
+/*padding and margin 0*/
+body{padding: 0; margin: 0;}
+
+/*background color*/
+body{background-color: #fafafa;}
+
+/*---------------------------------------------------*/
+/*-- HEADER --*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 1.8rem;
+    backdrop-filter: saturate(1.8) blur(5px);
+    width: 100%;
+}
+
+.header span{
+    padding: 2rem;
+    line-height: 10rem;
+}
+
+.header a{
+    text-decoration: none;
+    font-size: 4rem;
+    color: #000;
+    transition: all 0.4s;
+}
+
+.header a:hover {
+    color: rgb(150, 144, 144);
+}
+
+/*-- INTRO AND PHOTO --*/
+.intro-and-photo-cont{
+    margin-top: 15rem;
+}
+
+.intro-cont {
+    width: 40rem;
+    padding: 0 10rem 0 10rem;
+}
+
+/*-- the typing effect --*/
+.header-typed {
+    color:rgb(87, 87, 87);
+    font-size: 5.7rem;
+    letter-spacing: 0.1rem;
+}
+
+.typed-cursor {
+    font-size: 5.5rem;
+    color:rgb(87, 87, 87);
+}
+
+.intro-cont p {
+    font-size: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 2rem;
+    font-size: 3.2rem;
+}
+
+.write-about-me {
+    color: rgb(87, 87, 87);
+    font-size: 3.5rem;
+}
+
+.photo-cont{
+    padding: 0 4rem 0 0;
+}
+
+.photo-cont img{
+    padding: 3rem 10rem 8rem 10rem;
+    width: 42rem;
+    height: 58rem;
+}
+
+/*-- SOCIAL MEDIA --*/
+.social-media{
+    padding-left: 16rem;
+}
+
+.social-media i{
+    font-size: 4rem;
+    padding-right: 4rem;
+    transition: all 0.4s;
+}
+
+.social-media a {
+    color: rgb(87, 87, 87);
+}
+
+.fa-twitter:hover{
+    color: #00acee;
+}
+
+.fa-instagram:hover{
+    color: #cd486b;
+}
+
+.fa-github:hover{
+    color: #4078c0
+}
+
+.fa-dev:hover{
+    color: #000;
+}
+
+/*-- BLOG --*/
+/*-- header --*/
+.blog{
+    padding: 5rem 10rem 4rem 10rem ;
+}
+
+.blog h1{
+    font-size: 5rem;
+}
+
+.blog p{
+    font-size: 2.8rem;
+}
+/*-- blog posts --*/
+.blog-post {
+    margin: 2rem 6rem 0 6rem;
+    padding:2rem ;
+}
+
+.blog-post a{
+    text-decoration: none;
+}
+
+
+.blog-post h1{
+    font-size: 4rem;
+    color: #000;
+}
+
+.blog-post p{
+    font-size: 2.8rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: #fff;
+    color: rgb(95, 95, 95);
+}
+
+/*-- FOOTER --*/
+.footer {
+    background-color: #fff;
+}
+
+.footer p {
+    padding: 0 8rem 0 14rem;
+    font-size: 3rem;
+    color: #000;
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(95, 95, 95);
+}
+
+.footer a:hover{
+    color: #000 ;
+}
+
+.dark-mode{
+    background-color: #000;
+    color: #fff;
+}
+
+
+  
+/*-- MAking the switch for dark mode --*/
+/*----------- CONTINUE HERE make all px to rem ------------------ after that fix the dark mode */
+.wrapper {
+    position: absolute;
+    top:5rem;
+    right:1.8rem;
+    transform: translate(-50%, -50%);
+}
+
+.switch {
+position: relative;
+width: 8rem;
+height: 3rem;
+margin: 0;
+appearance: none;
+-webkit-appearance: none;
+border-radius: 25px;
+box-shadow: inset 5px 4px 5px rgba(8, 8, 8, 0.7);
+outline: none;
+cursor: pointer;
+overflow: hidden;
+background-color: #ffffff;
+}
+
+
+.switch:after{
+content: '';
+width: 46px;
+height:46px;
+border-radius: 50%;
+background-color: rgb(83, 83, 83);
+position: absolute;
+left: 2px;
+top: 2px;
+transform: translateX(0px);
+animation: off .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+box-shadow: inset 5px -5px 4px rgba(53, 53, 53, 0.3);
+}
+
+@keyframes off{
+0%{
+    transform: translateX(80px);
+    width: 46px;
+}
+50%{
+    width: 75px;  
+    border-radius: 25px;   
+}
+100%{
+    transform: translateX(0px); 
+    width: 46px;
+}
+}
+
+
+
+.switch:checked:after{
+animation: on .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+box-shadow: inset -5px -5px 4px rgba(53, 53, 53, 0.3);
+}
+
+@keyframes on{
+0%{
+    transform: translateX(0px);
+    width: 46px;
+}
+50%{
+    width: 75px;  
+    border-radius: 25px;   
+}
+100%{
+    transform: translateX(80px); 
+    width: 46px;
+}
+}
+
+
+.switch:checked:before{
+content: '';
+width: 15px;
+height: 15px;
+border-radius: 50%;
+position: absolute;
+left: 15px;
+top: 5px;
+transform-origin: 53px 10px;
+background-color: transparent;
+box-shadow: 5px -1px 0px rgb(63, 62, 62);
+filter: blur(0px);
+animation: sun .7s forwards ease;
+}
+@keyframes sun{
+0%{
+    transform: rotate(170deg);
+    background-color: transparent;
+    box-shadow: 5px -1px 0px rgb(95, 93, 93);
+    filter: blur(0px);
+}
+50%{
+    background-color: transparent;
+    box-shadow: 5px -1px 0px rgb(102, 101, 101);
+    filter: blur(0px);
+}
+90%{
+    background-color: #e7bc70;
+    box-shadow: 0px 0px 10px #e7bc70,
+    0px 0px 20px #e7bc70,
+    0px 0px 30px #e7bc70,
+        inset 0px 0px 2px #e7bc70;
+        filter: blur(1px);
+}
+100%{
+    transform: rotate(0deg);
+    background-color: #e7bc70;
+    box-shadow: 0px 0px 10px #e7bc70,
+    0px 0px 20px #e7bc70,
+    0px 0px 30px #e7bc70,
+        inset 0px 0px 2px #e7bc70;
+        filter: blur(1px);
+}
+}
+
+
+
+.switch:before{
+content: '';
+width: 15px;
+height: 15px;
+border-radius: 50%;
+position: absolute;
+left: 15px;
+top: 5px;
+filter: blur(1px);
+background-color: #f5daaa;
+box-shadow: 0px 0px 10px #f5deb4,
+0px 0px 20px #f5deb4,
+0px 0px 30px #f5deb4,
+    inset 0px 0px 2px #efd3a3;
+    transform-origin: 53px 10px;
+    animation: moon .7s forwards ease;
+}
+@keyframes moon{
+0%{
+    transform: rotate(0deg);
+    filter: blur(1px);
+}
+50%{
+    filter: blur(1px);
+}
+90%{
+    background-color: transparent;
+    box-shadow: 5px -1px 0px rgb(39, 38, 38);
+    filter: blur(0px);
+
+}
+100%{
+    transform: rotate(170deg);
+    background-color: transparent;
+    box-shadow: 5px -1px 0px rgb(39, 38, 38);
+    filter: blur(0px);
+}
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
