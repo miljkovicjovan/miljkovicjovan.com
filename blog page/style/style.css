@@ -123,7 +123,7 @@ body{background-color: #fafafa;}
 }
 
 .fa-dev:hover{
-    color: #000;
+    color: rgb(151, 70, 70);
 }
 
 /*-- BLOG --*/
@@ -183,9 +183,31 @@ body{background-color: #fafafa;}
     color: #000 ;
 }
 
-.dark-mode{
-    background-color: #000;
-    color: #fff;
+
+/*--- DARK MODE SETTINGS ---*/
+
+.darkFooter{
+    background-color: rgb(7, 7, 7);
+}
+
+.darkFooter p{
+    color: rgb(145, 142, 142);
+}
+
+.darkFooter a{
+    color: rgb(216, 214, 214);
+}
+
+.darkFooter a:hover{
+    color: rgb(167, 161, 161);
+}
+
+.darkFooter h1{
+    color: white;
+}
+
+.darkFooter span {
+    color: rgb(180, 179, 179);
 }
 
 
@@ -193,8 +215,8 @@ body{background-color: #fafafa;}
 /*-- MAking the switch for dark mode --*/
 /*----------- CONTINUE HERE make all px to rem ------------------ after that fix the dark mode */
 .wrapper {
-    position: absolute;
-    top:5rem;
+    position: fixed;
+    top:6.5rem;
     right:1.8rem;
     transform: translate(-50%, -50%);
 }
