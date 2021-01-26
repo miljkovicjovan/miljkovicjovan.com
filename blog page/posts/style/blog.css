@@ -57,9 +57,11 @@ body{background-color: #fafafa;}
 /*--header--*/
 .post-header{
     text-align: center;
+    padding-left: 3rem;
 }
 .post-header h1{
     font-size: 5rem;
+    padding-left: 2rem;
 }
 
 /*--by who--*/
@@ -100,6 +102,17 @@ body{background-color: #fafafa;}
 
 .post h1{
     font-size: 5rem;
+    font-weight: bold;
+}
+
+.post h2 {
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+.post h3 {
+    font-size: 4rem;
+    font-weight: bold;
 }
 
 .post p{
