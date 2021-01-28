@@ -1,0 +1,25 @@
+<div class="blog-wrapper">
+        <div class="blog-post"><!--post 3-->
+            <a href="posts/post3.html">
+            <h1>Interactive Dark mode switch for your Website using CSS and JavaScript</h1>
+            <p>I played around making an interactive switch for Dark/Light modes for my website. So I am going to present you my solution and If you like it you can see the steps....<b><u>(READ MORE)</u></b>
+            </p>
+            </a>
+        </div>
+
+        <div class="blog-post" style="float: left;"><!--post 2-->
+            <a href="posts/post2.html">
+            <h1>Making a Typewriter effect for your Website using Typed.js library</h1>
+            <p>I want my Header to consist of a text like: Hey, I'm Jovan. Simple and to the point. However I thought of a cool idea to use a JS library called Typed.js...<b><u>(READ MORE)</u></b>
+            </p>
+            </a>
+        </div>
+
+        <div class="blog-post"><!--post 1-->
+            <a href="posts/post1.html">
+            <h1>"Hello World!" My first post!</h1>
+            <p>Hello World! I’m Jovan, I’ve recently started my journey in learning coding and thought I’d introduce...<b><u>(READ MORE)</u></b>
+            </p>
+            </a>
+        </div>
+    </div>

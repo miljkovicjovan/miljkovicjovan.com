@@ -12,8 +12,12 @@
 
 
 <body>
+    
     <span class="header">
         <a href="../index.html"><p>Home</p></a>
+        <span class="wrapper">
+            <input  onclick="myFunction()" type="checkbox" name="checkbox" class="switch">
+        </span>
     </span>
     
     <div class="hero">
@@ -32,82 +36,90 @@
         </span>
     </div>
     
-    <div class="post">
-        <br>
-        <h1>Mindset before going in</h1>
-            <p>
-            I am developing and designing my personal website for blog-posts and projects. I want my Header to consist of a text like:<br><br>
-            <b>Hey, I'm Jovan</b><br><br>
-            Simple and to the point. However I thought of a cool idea to use a JS library I saw someone use called Typed.js. Check it out here so you understand the principle : <a href="https://mattboldt.com/demos/typed-js/">Link</a>
-            <br><br>
-            So as you can see the library basically allows you to type out something and delete it and type something else but it makes for a cool effect on your webpage by making it look like a cool old typewriter effect to add. <br><br></p>
-            <h1>My vision:</h1>
-            <p>
-            So the header I wanted to have at the start and at the end of the animation is:<br> <b>Hey, I'm Jovan</b>.<br>
-            But I thought of a cool way for people to understand who I am from the start is to delete until it looks like: Hey, I'm<br>
-            And then to circle around different things I do like:<br> </p>
-            <ul>
-                <li>a Software Engineeer</li>
-                <li>a Web Developer</li>
-                <li>a student</li>
-            </ul>
-            <p>
-            and then to end with saying : <b>Hey, I'm Jovan</b>. <br>
-            So that way people get a feeling of what the website is about in an interactive and pretty simple way. <br> <br>
-            </p>
-            <h1>My Steps</h1> <br>
-            <ol>
-                <li>Download the library and add to project folder</li>
-                <p>First of all you need to download the library so here's is the <a href="https://mattboldt.com/demos/typed-js/">link</a> if you want to follow along with this post/tutorial. After downloading the .zip extract the files and add the whole folder to your projects source folder.
+    <div style="text-align: center;">
+        <div class="post">
+            <br>
+            <h1>Mindset before going in</h1>
+                <p>
+                I am developing and designing my personal website for blog-posts and projects. I want my Header to consist of a text like:<br><br>
+                <b>Hey, I'm Jovan</b><br><br>
+                Simple and to the point. However I thought of a cool idea to use a JS library I saw someone use called Typed.js. Check it out here so you understand the principle : <a href="https://mattboldt.com/demos/typed-js/">Link</a>
+                <br><br>
+                So as you can see the library basically allows you to type out something and delete it and type something else but it makes for a cool effect on your webpage by making it look like a cool old typewriter effect to add. <br><br></p>
+                <h1>My vision:</h1>
+                <p>
+                So the header I wanted to have at the start and at the end of the animation is:<br> <b>Hey, I'm Jovan</b>.<br>
+                But I thought of a cool way for people to understand who I am from the start is to delete until it looks like: Hey, I'm<br>
+                And then to circle around different things I do like:<br> </p>
+                <ul>
+                    <li>a Software Engineeer</li>
+                    <li>a Web Developer</li>
+                    <li>a student</li>
+                </ul>
+                <p>
+                and then to end with saying : <b>Hey, I'm Jovan</b>. <br>
+                So that way people get a feeling of what the website is about in an interactive and pretty simple way. <br> <br>
                 </p>
-                <li>Add scripts to the header</li>
-                <p>These are the needed scripts that make the library function, you need to inculde them on the header of your HTML file. <br> <br>
-                <code style="font-size: 2rem;">
-                    &lt;script src="https://ajax.googleapis<br>.com/ajax/libs/jquery<br>/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
-                    &lt;script src="./typed.js-master/lib/typed.min.js"&gt;&lt;/script&gt;</code></p> <br>
-                <li>Add the needed script to function</li>
-                <p>This is only the basic code that the website provides, when we move on we will change and modify this code for our needs <br> <br>
-                <code style="font-size: 2rem;">var typed = new Typed('.element', {
-                    strings: ["First sentence.", "Second sentence."],
-                    typeSpeed: 30
-                  });</code></p>
-                <p>This is how that simple format looks with a little CSS added in the mix.</p> <br>
-                <img src="images/post2/1.gif" alt="gif of the result so far" style="width: 100%;">
-                <li>Modify to your needs</li>
-                <p>So we have already enstablished what I want to be on my site so let's try to implement it here. After adding the text I wanted I realised that it typed too fast. I slowed the typing speed by going in the script and playing with the typeSpeed attribute and found what I liked at: <code>typeSpeed : 90</code></p> <br>
-                <p>After that I needed to add another attribute so I could play arround with the speed that it backspaced the text. I searched in the files provided the code that can do that and found that I can just add <code>backSpeed: 40</code> in the script which was a great speed. While searching throught the code I also found an attribute backDelay, which delays the time between when the line is typed and when it's deleted however I didn't use it.
+                <h1>My Steps</h1> <br>
+                <ol>
+                    <li>Download the library and add to project folder</li>
+                    <p>First of all you need to download the library so here's is the <a href="https://mattboldt.com/demos/typed-js/">link</a> if you want to follow along with this post/tutorial. After downloading the .zip extract the files and add the whole folder to your projects source folder.
+                    </p>
+                    <li>Add scripts to the header</li>
+                    <p>These are the needed scripts that make the library function, you need to inculde them on the header of your HTML file. <br> <br>
+                    <code style="font-size: 2rem;">
+                        &lt;script src="https://ajax.googleapis<br>.com/ajax/libs/jquery<br>/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+                        &lt;script src="./typed.js-master/lib/typed.min.js"&gt;&lt;/script&gt;</code></p> <br>
+                    <li>Add the needed script to function</li>
+                    <p>This is only the basic code that the website provides, when we move on we will change and modify this code for our needs <br> <br>
+                    <code style="font-size: 2rem;">var typed = new Typed('.element', {
+                        strings: ["First sentence.", "Second sentence."],
+                        typeSpeed: 30
+                    });</code></p>
+                    <p>This is how that simple format looks with a little CSS added in the mix.</p> <br>
+                    <img src="images/post2/1.gif" alt="gif of the result so far" style="width: 100%;">
+                    <li>Modify to your needs</li>
+                    <p>So we have already enstablished what I want to be on my site so let's try to implement it here. After adding the text I wanted I realised that it typed too fast. I slowed the typing speed by going in the script and playing with the typeSpeed attribute and found what I liked at: <code>typeSpeed : 90</code></p> <br>
+                    <p>After that I needed to add another attribute so I could play arround with the speed that it backspaced the text. I searched in the files provided the code that can do that and found that I can just add <code>backSpeed: 40</code> in the script which was a great speed. While searching throught the code I also found an attribute backDelay, which delays the time between when the line is typed and when it's deleted however I didn't use it.
+                    </p>
+                    <p>I thought I was finished here but when you use CSS and make your text bigger the cursor when the library is typing isn't getting bigger with the text so you have to find the variable and modify it. So after reading the README file I found the variable and modified it by adding this to my CSS file: <br><br>
+                    <code>.typed-cursor {
+                        font-size: 5.5rem;
+                        color:rgb(87, 87, 87);
+                    }</code>
+                    </p>
+                </ol>
+                <h1>Final product</h1> <br>
+                    <img src="images/post2/2.gif" alt="final product" style="width: 100%;">
+                    <p>Pretty cool right? If you want to try it yourself here is where you can get my source code: <br> <br>
+                        <a href="https://www.codepile.net/pile/4o74LL3a">Codepile</a> <br>
+                        In order to run this you have to also install the library and add it to the same folder. <br> <br>
+                        
+                        <a href="https://github.com/miljkovicjovan/Typewriter-effect-using-Typed.js-">GitHub</a> <br>
+                        This is the complete code I used in this example & the library so by downloading the code you get both.
+                    </p> <br>
+                <h1>Final thoughts/ Goodbyes</h1>
+                <p>Thank you so much for reading this If you made it to here tell me what's your favorite song in the comments :)! <br> <br>
+                    I hope this helped anyone and Thanks again! <br> <br>
+                    ~Jovan
                 </p>
-                <p>I thought I was finished here but when you use CSS and make your text bigger the cursor when the library is typing isn't getting bigger with the text so you have to find the variable and modify it. So after reading the README file I found the variable and modified it by adding this to my CSS file: <br><br>
-                <code>.typed-cursor {
-                    font-size: 5.5rem;
-                    color:rgb(87, 87, 87);
-                }</code>
-                </p>
-            </ol>
-            <h1>Final product</h1> <br>
-                <img src="images/post2/2.gif" alt="final product" style="width: 100%;">
-                <p>Pretty cool right? If you want to try it yourself here is where you can get my source code: <br> <br>
-                    <a href="https://www.codepile.net/pile/4o74LL3a">Codepile</a> <br>
-                    In order to run this you have to also install the library and add it to the same folder. <br> <br>
-                    
-                    <a href="https://github.com/miljkovicjovan/Typewriter-effect-using-Typed.js-">GitHub</a> <br>
-                    This is the complete code I used in this example & the library so by downloading the code you get both.
-                </p> <br>
-            <h1>Final thoughts/ Goodbyes</h1>
-            <p>Thank you so much for reading this If you made it to here tell me what's your favorite song in the comments :)! <br> <br>
-                I hope this helped anyone and Thanks again! <br> <br>
-                ~Jovan</p>
+        </div>
     </div>
 
     <span class="footer">
         <p><a href="https://instagram.com/miljkovicjovan/"> <br>&copy;Jovan Miljkovic</a> - 2021</p>
     </span>
-    <span class="social-media" style="padding-bottom: 5rem;">
-        <a href="https://twitter.com/miljkovicjovann"><i class="fab fa-twitter" ></i></a>
-        <a href="https://www.instagram.com/miljkovicjovan/"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/miljkovicjovan"><i class="fab fa-github"></i></a>
-        <a href="https://dev.to/miljkovicjovan"><i class="fab fa-dev"></i></a>
-    </span>
+    <div style="text-align: center;">
+        <span class="social-media" style="padding-bottom: 5rem;">
+            <a href="https://twitter.com/miljkovicjovann"><i class="fab fa-twitter" ></i></a>
+            <a href="https://www.instagram.com/miljkovicjovan/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/miljkovicjovan"><i class="fab fa-github"></i></a>
+            <a href="https://dev.to/miljkovicjovan"><i class="fab fa-dev"></i></a>
+        </span>
+    </div>
+
+    <!-- all scripts needed -->
+    <script src="../js/darkmode.js"></script>
 
 </body>
 

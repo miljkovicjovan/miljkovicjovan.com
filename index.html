@@ -9,89 +9,71 @@
     <!-- for icons -->
     <script src="https://kit.fontawesome.com/b7c66f5c82.js" crossorigin="anonymous"></script>
     <!-- Needed for typed.js -->
-    <!-- typed.min.js file from typed.js folder -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Add jquery cdn -->
     <script src="./typed.js-master/lib/typed.min.js"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal@4"></script>
 </head>
 
-
 <body>
+
     <span class="header">
-        <a href="index.html"><span>Home</span></a>
-        <div class="wrapper">
-            <input  onclick="myFunction()" type="checkbox" name="checkbox" class="switch">
-            </div>
+        <a href="index.html" class="borderLeftRight"><span>Home</span></a>
+        <span class="wrapper">
+            <input  onclick="myFunction(this)" type="checkbox" name="checkbox" class="switch">
+        </span>
     </span>
 
-    <div class="intro-and-photo-cont">
-        <div class="intro-cont">
-            <span class="header-typed"></span>
-            <p>Welcome to my <b><u>digital journal</u></b> ! On this site I document everything I learned and created. You may expect to see <b>minimum 3 articles per week </b>.</p>
+    <div class="heading-wrapper">
+        <span class="header-typed animate__animated animate__fadeIn"></span>
+    </div>
+
+    <div class="cont">
+        <div class="photo-cont animate__animated animate__fadeInRight">
+            <img src="images/profile.jpg" alt="">
         </div>
-        <div class="photo-cont">
-            <img src="images/profile.jpg" alt="photo of me">
+
+        <div class="blog animate__animated animate__fadeInLeft">
+            <h1 id="bbc">About me</h1>
+            <hr>
+            <p>My name is Jovan Miljkovic, I'm an 18 year old <b>Software and Data Engineering</b> student from Greece studying in Serbia. I am a first year in college, however most of studying and practice are done outside of it. I have a <b>passion of learning and for teaching</b>. Check out what I'm all about down below.</p>
         </div>
+    </div>  
+
+    <div class="linksCont">
+        <div class="githubLink">
+            <a href="https://github.com/miljkovicjovan">GitHub</a>
+        </div>
+        <p>Here you can see all of the projects that I worked on, am working on and will work on. I need help also so join in everything is open-source.</p>
+        <div class="blogLink">
+            <span><a href="#">Blog</a></span>
+        </div>
+        <p>Here you can see all of the projects that I worked on, am working on and will work on. I need help also so join in everything is open-source.</p>
     </div>
 
-    <span class="social-media">
-        <a href="https://twitter.com/miljkovicjovann"><i class="fab fa-twitter" ></i></a>
-        <a href="https://www.instagram.com/miljkovicjovan/"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/miljkovicjovan"><i class="fab fa-github"></i></a>
-        <a href="https://dev.to/miljkovicjovan"><i class="fab fa-dev"></i></a>
-    </span>
-
-
-    <div class="blog">
-        <h1>Blog</h1>
-        <hr>
-        <p>Personal autobiography: 100% authentic, good for inspiration, my learning path, not ideal but 100% <b>mine</b>.</p>
+    <div class="footer">
+        <p><a href="https://instagram.com/miljkovicjovan/" class="borderLeftRight"> <br>&copy;Jovan Miljkovic</a> - 2021</p>
+    </div>
+    <div style="text-align: center;">
+        <span class="social-media">
+            <a href="https://twitter.com/miljkovicjovann"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/miljkovicjovan/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/miljkovicjovan"><i class="fab fa-github"></i></a>
+            <a href="https://dev.to/miljkovicjovan"><i class="fab fa-dev" style="padding-right: 0;"></i></a>
+        </span>
     </div>
 
-    <div class="blog-post"><!--post 2-->
-        <a href="posts/post2.html">
-        <h1>Making a Typewriter effect for your Website using Typed.js library</h1>
-        <p>I want my Header to consist of a text like: Hey, I'm Jovan. Simple and to the point. However I thought of a cool idea to use a JS library called Typed.js...(Read more)
-        </p>
-        </a>
-    </div>
-
-    <div class="blog-post"><!--post 1-->
-        <a href="posts/post1.html">
-        <h1>"Hello World!" My first post!</h1>
-        <p>Hello World! I’m Jovan, I’ve recently started my journey in learning coding and thought I’d introduce...(Read more)
-        </p>
-        </a>
-    </div>
-
-    
-    <span class="footer">
-        <p><a href="https://instagram.com/miljkovicjovan/"> <br>&copy;Jovan Miljkovic</a> - 2021</p>
-    </span>
-    <span class="social-media" style="padding-bottom: 5rem;">
-        <a href="https://twitter.com/miljkovicjovann"><i class="fab fa-twitter" ></i></a>
-        <a href="https://www.instagram.com/miljkovicjovan/"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/miljkovicjovan"><i class="fab fa-github"></i></a>
-        <a href="https://dev.to/miljkovicjovan"><i class="fab fa-dev"></i></a>
-    </span>
-
-    
-
-    <script>
-    function myFunction() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-      }</script>
-
-    <!-- Add this script for successful  
-        implementation of typed.js -->
-        <script> 
-            var typed = new Typed('.header-typed', {
-            strings: ["Hey, I'm Jovan.", "Hey, I'm a Software Engineer", "Hey, I'm a Web Developer", "Hey, I'm a student", "Hey, I'm Jovan."],
-            typeSpeed: 90 ,
-            backSpeed: 40
-        });
-        </script>
+    <!-- all scripts needed -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/typeheader.js"></script>
+    <script src="js/scroll.js"></script>
 
 </body>
 

@@ -1,20 +1,22 @@
 
-/*-- IMPORTS --*/
+/*------------------------ IMPORTS ------------------------*/
+/*------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-    /*normal font*/
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-/*-- HTML --*/
+/*------------------------ HTML ------------------------*/
+/*------------------------------------------------------------------*/
 ul{
     margin-block-end: 0;
     margin-block-start: 0;
 }
+
 h1{
     margin-block-end: 0;
     margin-block-start: 0;
 }
-/*-- BODY --*/
 
+/*------------------------ BODY ------------------------*/
+/*------------------------------------------------------------------*/
 /*font family*/
 body{font-family:'Roboto' , sans-serif;}
 
@@ -24,7 +26,8 @@ body{padding: 0; margin: 0;}
 /*background color*/
 body{background-color: #fafafa;}
 
-/*-- HEADER --*/
+/*------------------------ HEADER ------------------------*/
+/*------------------------------------------------------------------*/
 .header{
     position: fixed;
     top: 0;
@@ -48,18 +51,179 @@ body{background-color: #fafafa;}
     color: rgb(150, 144, 144);
 }
 
-/*-------------------- HERO --------------------*/
+/*------------------------ DARK MODE SWITCH ------------------------*/
+/*------------------------------------------------------------------*/
+.wrapper {
+    position: fixed;
+    top:6.5rem;
+    right:1.8rem;
+    transform: translate(-50%, -50%);
+}
+
+.switch {
+    position: relative;
+    width: 8rem;
+    height: 3rem;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 10rem;
+    box-shadow: inset 0.3rem 0.3rem 0.3rem rgba(8, 8, 8, 0.7);
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.switch:after{
+    content: '';
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    background-color: rgb(83, 83, 83);
+    position: absolute;
+    left: 0.1rem;
+    top: 0.1rem;
+    transform: translateX(0px);
+    animation: off .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+    box-shadow: inset 0.3rem 0.3rem 0.3rem rgba(53, 53, 53, 0.3);
+}
+
+@keyframes off{
+    0%{
+        transform: translateX(5rem);
+        width: 2.9rem;
+    }
+    50%{
+        width: 3.4rem;  
+        border-radius: 1.6rem;   
+    }
+    100%{
+        transform: translateX(0px); 
+        width: 2.9rem;
+    }
+}
+
+.switch:checked:after{
+    animation: on .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+    box-shadow: inset 0.3rem 0.3rem 0.3rem rgba(53, 53, 53, 0.3);
+}
+
+@keyframes on{
+    0%{
+        transform: translateX(0px);
+        width: 2.9rem;
+    }
+    50%{
+        width: 3.4rem;  
+        border-radius: 1.6rem;   
+    }
+    100%{
+        transform: translateX(5rem); 
+        width: 2.9rem;
+    }
+}
+
+.switch:checked:before{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 1rem;
+    top: 0.3rem;
+    transform-origin: 3rem 0.6rem;
+    background-color: transparent;
+    box-shadow: 3rem 2rem 0px rgb(63, 62, 62);
+    filter: blur(0px);
+    animation: sun .7s forwards ease;
+}
+
+@keyframes sun{
+    0%{
+        transform: rotate(170deg);
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(95, 93, 93);
+        filter: blur(0px);
+    }
+    50%{
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(102, 101, 101);
+        filter: blur(0px);
+    }
+    90%{
+        background-color: #e7bc70;
+        box-shadow: 0px 0px 10px #e7bc70,
+        0px 0px 20px #e7bc70,
+        0px 0px 30px #e7bc70,
+            inset 0px 0px 2px #e7bc70;
+            filter: blur(1px);
+    }
+    100%{
+        transform: rotate(0deg);
+        background-color: #e7bc70;
+        box-shadow: 0px 0px 10px #e7bc70,
+        0px 0px 20px #e7bc70,
+        0px 0px 30px #e7bc70,
+            inset 0px 0px 2px #e7bc70;
+            filter: blur(1px);
+    }
+}
+
+.switch:before{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 1rem;
+    top: 0.3rem;
+    filter: blur(1px);
+    background-color: #f5daaa;
+    box-shadow: 0px 0px 10px #f5deb4,
+    0px 0px 20px #f5deb4,
+    0px 0px 30px #f5deb4,
+        inset 0px 0px 2px #efd3a3;
+        transform-origin: 3rem 0.6rem;
+        animation: moon .7s forwards ease;
+}
+
+@keyframes moon{
+    0%{
+        transform: rotate(0deg);
+        filter: blur(1px);
+    }
+    50%{
+        filter: blur(1px);
+    }
+    90%{
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(39, 38, 38);
+        filter: blur(0px);
+
+    }
+    100%{
+        transform: rotate(170deg);
+        background-color: transparent;
+        box-shadow: 5px -1px 0px rgb(39, 38, 38);
+        filter: blur(0px);
+    }
+}
+/*----------------------------------------------*/
+
+
+/*------------------------ HERO ------------------------*/
+/*------------------------------------------------------*/
 .hero {
     margin-top: 15rem;
-    padding: 0 5rem 0 0;
+    text-align: center;
 }
 
 /*--header--*/
-.post-header{
-    text-align: center;
-}
 .post-header h1{
     font-size: 5rem;
+    width: 85%;
+    padding: 0 7.5% 0 7.5%;
 }
 
 /*--by who--*/
@@ -68,21 +232,19 @@ body{background-color: #fafafa;}
     padding-bottom: 2rem;
     display: flex;
 }
+
 .by-who img{
-    margin-left: 3rem;
     height: 6rem;
     border-radius: 2rem;
     margin: 2rem;
 }
+
 .by-who p{
     font-size: 2.8rem;
     padding: 1rem 0 0 0;
 }
 
 /*--tags--*/
-.tags{
-    margin-left: 1rem;
-}
 .tags span{
     margin-left: 2rem;
     font-size: 2.5rem;
@@ -100,6 +262,17 @@ body{background-color: #fafafa;}
 
 .post h1{
     font-size: 5rem;
+    font-weight: bold;
+}
+
+.post h2 {
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+.post h3 {
+    font-size: 4rem;
+    font-weight: bold;
 }
 
 .post p{
@@ -128,16 +301,12 @@ body{background-color: #fafafa;}
     color: #fafafa;
 }
 
-
-/*-- SOCIAL MEDIA --*/
-.social-media{
-    padding-left: 16rem;
-}
-
+/*------------------------ SOCIAL ------------------------*/
+/*--------------------------------------------------------*/
 .social-media i{
     font-size: 4rem;
-    padding-right: 4rem;
     transition: all 0.4s;
+    padding-right: 4rem;
 }
 
 .social-media a {
@@ -160,13 +329,14 @@ body{background-color: #fafafa;}
     color: #000;
 }
 
-/*-- FOOTER --*/
+/*------------------------ FOOTER ------------------------*/
+/*--------------------------------------------------------*/
 .footer {
     background-color: #fff;
+    text-align: center;
 }
 
 .footer p {
-    padding: 0 8rem 0 14rem;
     font-size: 3rem;
     color: #000;
 }
@@ -178,4 +348,26 @@ body{background-color: #fafafa;}
 
 .footer a:hover{
     color: #000 ;
+}
+
+/*------------------------ DARKMODE ------------------------*/
+/*----------------------------------------------------------*/
+.darkFooter{
+    background-color: rgb(7, 7, 7);
+}
+
+.darkFooter a{
+    color: rgb(216, 214, 214);
+}
+
+.darkFooter p{
+    color: rgb(255, 255, 255);
+}
+
+.darkFooter a:hover{
+    color: rgb(167, 161, 161);
+}
+
+.darkFooter h1{
+    color: white;
 }

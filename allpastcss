@@ -3,6 +3,18 @@
 /*---------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+/*------------------------ HTML ------------------------*/
+/*------------------------------------------------------*/
+ul{
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+h1{
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
 /*------------------------ BODY ------------------------*/
 /*------------------------------------------------------*/
 /*font family*/
@@ -17,7 +29,7 @@ body{background-color: #fafafa;}
 /*------------------------------------------------------------*/
 /*------------------------ RESPONSIVE ------------------------*/
 /*-------------------------- DESIGN --------------------------*/
-/*--------------------------- PHONE -------------------------*/
+/*------------------------- MONITORS -------------------------*/
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 
@@ -28,7 +40,6 @@ body{background-color: #fafafa;}
     top: 0;
     backdrop-filter: saturate(1.8) blur(5px);
     width: 100%;
-    z-index: 1000;
 }
 
 .header span{
@@ -228,12 +239,11 @@ body{background-color: #fafafa;}
 }
 /*---------------  end of the switch -----------*/
 
-/*------------------------ HERO ------------------------*/
+/*------------------------ INTRO AND PHOTO CONT ------------------------*/
 /*----------------------------------------------------------------------*/
 .heading-wrapper {
     text-align: center;
     padding-top: 11rem;
-    padding-bottom: 10rem;
 }
 
 /*-- the typing effect --*/
@@ -250,7 +260,6 @@ body{background-color: #fafafa;}
 
 .photo-cont {
     text-align: center;
-    padding-bottom: 5rem;
 }
 
 .photo-cont img{
@@ -277,24 +286,61 @@ body{background-color: #fafafa;}
 }
 
 .blog p{
-    font-size: 3.7rem;
+    font-size: 2.8rem;
+}
+
+/*-- blog posts --*/
+.blog-post {
+    width: 70%;
+    padding: 0 15% 0 15%;
+}
+
+.blog-post a{
+    text-decoration: none;
+}
+
+.blog-post h1{
+    font-size: 4rem;
+    color: #000;
+}
+
+.blog-post p{
+    font-size: 2.8rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow:
+    0 1.7px 16.9px rgba(0, 0, 0, 0.022),
+    0 3.9px 31.8px rgba(0, 0, 0, 0.018),
+    0 6.8px 44.2px rgba(0, 0, 0, 0.012),
+    0 11px 53.7px rgba(0, 0, 0, 0.007),
+    0 17.2px 59.8px rgba(0, 0, 0, 0.006),
+    0 27.3px 62.2px rgba(0, 0, 0, 0.011),
+    0 46.8px 62.7px rgba(0, 0, 0, 0.031),
+    0 98px 89px rgba(0, 0, 0, 0.14)
+  ;
+    color: rgb(95, 95, 95);
 }
 
 /*------------------------ LINKS ------------------------*/
 /*------------------------------------------------------------------*/
 .linksCont {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    padding: 20rem 10% 15rem 10%;
+    padding: 15rem 10% 0 10%;
     width: 80%;
     align-items: center;
+}
+
+.githubLink {
+
 }
 
 .githubLink a{
     text-decoration: none;
     color: hsl(243, 80%, 62%);
-    font-size: 4rem;
+    font-size: 2rem;
     padding: 2rem;
     background-color: rgb(224, 223, 223);
     transition: all 0.3s;
@@ -308,13 +354,13 @@ body{background-color: #fafafa;}
 }
 
 .blogLink {
-    padding-top: 5rem;
+
 }
 
 .blogLink a{
     text-decoration: none;
     color: hsl(243, 80%, 62%);
-    font-size: 4rem;
+    font-size: 2rem;
     padding: 2rem;
     background-color: rgb(224, 223, 223);
     transition: all 0.3s;
@@ -326,22 +372,6 @@ body{background-color: #fafafa;}
     color:rgb(224, 223, 223); 
 }
 
-.linksCont p {
-    font-size: 3rem;
-    padding: 3rem;
-    border-radius: 3rem;
-    width: 80%;
-    box-shadow:
-    0 2.6px 30.8px rgba(0, 0, 0, 0.022),
-    0 8.2px 36.7px rgba(0, 0, 0, 0.018),
-    0 17.9px 37.8px rgba(0, 0, 0, 0.012),
-    0 34.1px 36.9px rgba(0, 0, 0, 0.007),
-    0 60.2px 34.9px rgba(0, 0, 0, 0.006),
-    0 89.1px 32.9px rgba(0, 0, 0, 0.011),
-    0 100.5px 32.2px rgba(0, 0, 0, 0.031),
-    0 98px 40px rgba(0, 0, 0, 0.14);
-}
-
 /*------------------------ FOOTER ------------------------*/
 /*--------------------------------------------------------*/
 .footer {
@@ -349,7 +379,7 @@ body{background-color: #fafafa;}
 }
 
 .footer p {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #000;
 }
 
@@ -357,6 +387,32 @@ body{background-color: #fafafa;}
     text-decoration: none;
     color: rgb(95, 95, 95);
     font-weight: 600;
+}
+
+/*------------------------ DARK MODE SETTINGS ------------------------*/
+/*--------------------------------------------------------------------*/
+.darkFooter{
+    background-color: rgb(7, 7, 7);
+}
+
+.darkFooter a{
+    color: rgb(216, 214, 214);
+}
+
+.darkFooter p{
+    color: rgb(255, 255, 255);
+}
+
+.darkFooter a:hover{
+    color: rgb(167, 161, 161);
+}
+
+.darkFooter h1{
+    color: white;
+}
+
+.darkFooter span {
+    color: rgb(180, 179, 179);
 }
 
 /*------------------------ SOCIAL ------------------------*/
@@ -392,39 +448,11 @@ body{background-color: #fafafa;}
     color: rgb(151, 70, 70);
 }
 
-/*------------------------ DARK MODE SETTINGS ------------------------*/
-/*--------------------------------------------------------------------*/
-.darkFooter{
-    background-color: rgb(7, 7, 7);
-}
-
-.darkFooter a{
-    color: rgb(216, 214, 214);
-}
-
-.darkFooter p{
-    color: rgb(255, 255, 255);
-}
-
-.darkFooter a:hover{
-    color: rgb(167, 161, 161);
-}
-
-.darkFooter h1{
-    color: white;
-}
-
-.darkFooter span {
-    color: rgb(180, 179, 179);
-}
-
-
-
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 /*------------------------ RESPONSIVE ------------------------*/
 /*-------------------------- DESIGN --------------------------*/
-/*------------------------- MONITORS ---------------------------*/
+/*-------------------------- PHONES---------------------------*/
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 
@@ -473,7 +501,7 @@ body{background-color: #fafafa;}
     }
 
     .blog {
-        padding-top: 3rem;
+        padding-top: 6.9rem;
         display: inline-block;
         width: 27%;
         float: left;
@@ -485,6 +513,29 @@ body{background-color: #fafafa;}
 
     .blog p {
         font-size: 1.4rem;
+    }
+    
+    /*----------- BLOG POSTS --------------*/
+    .blog-wrapper {
+        width: 70%;
+        padding: 5% 15% 0 15%;
+    }
+
+    .blog-post {
+        width: 50%;
+        padding: 0;
+        display: inline-block;
+    }
+
+    .blog-post h1 {
+        font-size: 1.6rem;
+    }
+
+    .blog-post p {
+        margin-top: 0;
+        font-size: 1.7rem;
+        margin: 3rem;
+        padding: 1rem;
     }
 
     /*----------- FOOTER --------------*/

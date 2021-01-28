@@ -1,0 +1,1 @@
+ScrollReveal().reveal('.blog-post', {delay: 500});
