@@ -487,6 +487,32 @@ body{background-color: #fafafa;}
         font-size: 1.4rem;
     }
 
+    /*----------- LINKS CONT --------------*/
+    .linksCont {
+        flex-direction: row;
+    }
+    
+    .linksCont p { font-size: 2rem;}
+
+    .githubLink {
+        text-align: center;
+        width: 30%;
+    }
+
+    .githubLink a {
+        font-size: 2rem;
+    }
+
+    .blogLink {
+        padding-top: 0;
+        text-align: center;
+        width: 30%;
+    }
+
+    .blogLink a {
+        font-size: 2rem;
+    }
+
     /*----------- FOOTER --------------*/
     .footer p {
         font-size: 1.5rem;
